@@ -1,0 +1,7 @@
+{
+  "name": "location-permissions",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
