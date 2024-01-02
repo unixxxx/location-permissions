@@ -1,3 +1,20 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar> </ion-toolbar>
+    </ion-header>
+
+    <div
+      class="map"
+      leaflet
+      [leafletOptions]="options"
+      [leafletZoom]="0"
+      [leafletFitBounds]="DEFAULT_FIT_BOUNDS"
+      (leafletMapReady)="onMapReady($event)"
+    ></div>
+    <leaflet-locate-control
+      [options]="locateOptions"
+      [map]="_map"
+    ></leaflet-locate-control>
+  </ion-content>
 </ion-app>
